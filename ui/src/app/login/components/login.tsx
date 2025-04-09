@@ -135,7 +135,7 @@ export class Login extends React.Component<RouteComponentProps<{}>, State> {
             this.setState({loginInProgress: false});
             if (returnURL) {
                 const url = new URL(returnURL);
-                this.appContext.apis.navigation.goto(url.pathname + url.search);
+                this.appContext.apis.navigation.goto('/applications' + url.search);
             } else {
                 this.appContext.apis.navigation.goto('/applications');
             }
